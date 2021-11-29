@@ -1,0 +1,25 @@
+{
+  "name": "goit-js-hw-09",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://github.com/VVViktorVVV/goit-js-hw-09",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /goit-js-hw-09"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VVViktorVVV/goit-js-hw-09.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VVViktorVVV/goit-js-hw-09/issues"
+  },
+  
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  }
+}
