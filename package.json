@@ -18,8 +18,11 @@
   "bugs": {
     "url": "https://github.com/VVViktorVVV/goit-js-hw-09/issues"
   },
-  
   "devDependencies": {
     "parcel": "^2.0.1"
+  },
+  "dependencies": {
+    "flatpickr": "^4.6.9",
+    "notiflix": "^3.2.2"
   }
 }
