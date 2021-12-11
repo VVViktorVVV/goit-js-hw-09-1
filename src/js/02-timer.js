@@ -14,6 +14,7 @@ const secondsEl = document.querySelector('.value[data-seconds]');
 
 let endTime = 0;
 let inequalityTime = 0;
+let timerId = null;
 
 
 
@@ -44,12 +45,20 @@ btnStart.addEventListener('click', timerToStart);
 
 function timerToStart() {
   btnStart.disabled = true;
-  input.setAttribute('disabled', true);
+  input.disabled = true;
 
-  setInterval(() => {
+    
+
+  timerId = setInterval(() => {
     const inMomentTime = new Date().getTime();
     inequalityTime = endTime - inMomentTime;
-    console.log(inequalityTime)
+
+    if (inequalityTime < 0) {
+      input.disabled = false;
+      btnStart.disabled = false;
+      clearInterval(timerId);
+      return;
+    }
     
     const { days, hours, minutes, seconds } = convertMs(inequalityTime);
    
@@ -58,11 +67,10 @@ function timerToStart() {
     minutesEl.textContent = minutes;
     secondsEl.textContent = seconds;
 
-    if (inequalityTime <= 0) {
-      input.setAttribute('disabled', false);
-      return;
-    }
+    
   }, 1000)
+
+
 };
 
 
